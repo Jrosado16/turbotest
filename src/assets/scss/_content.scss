@@ -1,0 +1,188 @@
+.content{
+    width: 100%;
+    // justify-content: flex-start;
+    // align-self: flex-end;
+    
+    .title{
+        font-size: 26px;
+        color: $secondaryColor;
+        font-weight: 400;
+    }
+
+    .nav-container{
+        background-color: $gray;        
+        .container{
+            height: 45px;
+            display: flex;
+            align-items: flex-end;    
+        }
+    }
+    .nav{
+        padding-bottom: 7px;
+        
+        a{
+            color: $primaryColor;
+            text-decoration: none;
+            padding-bottom: 5px;
+            font-weight: 500;
+            margin: 0 2rem;
+        }
+        .active{
+            border-bottom: 2px solid $primaryColor;
+        }
+    }
+
+    .she-container{
+        margin: 51px 0 0px 0;
+        padding: 1rem;
+
+
+        .description{
+            margin: 30px 0;
+            font-size: 14px;
+            width: 100%;
+            color: $gray2;
+            line-height: 24px;
+            // padding: 10px;
+        }
+    }
+    @include tablet() {
+        .she-container{
+
+            margin: 51px 0;
+            
+            .description{
+                
+                width: 640px;
+                height: 130px;
+                padding: unset;
+                
+            }
+            .title{
+                text-align: left;
+            }
+        }
+        .nav{
+            a{
+                margin: 0 66px 0 0;
+            }
+        }
+    }
+
+    .car-content{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 330px);
+        justify-content: center;
+        .card{
+            // width: 328px;
+            margin: 5px;
+            position: relative;
+            img{
+                height: 300px;
+                width: 328px;
+            }
+
+            .description{
+                position: absolute;
+                bottom: 46px;
+                left: 20px;
+                color: white;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        @include tablet (){
+            justify-content: space-between;
+        }
+    }
+
+
+    .hold-container{
+        margin-top: 50px;
+
+        .hold-2{
+            display: flex;
+            flex-direction: column-reverse;
+            // margin-top: 2rem !important;
+            margin-top: 40px;
+        }
+
+        @include tablet() {
+            margin-top: 102px;
+            .hold-2{
+                display: flex;
+                flex-direction: row;
+                margin-top: 102px;
+            }
+        }
+        
+        .container{
+            // display: flex;
+            justify-content: space-between;
+            img{
+                width: 100%;
+                margin-top: 2rem;
+                // height: 440px;
+                // margin-left: 46px;
+
+            }
+            .info{
+                padding: 1rem;
+            }
+            
+
+            .description{
+                width: 100%;
+                margin-bottom: 30px;
+                line-height: 24px;
+                // font-weight: 700;
+                color: $gray2;
+
+                .mark{
+                    font-weight: 700;
+                }
+            }
+            .title{
+                margin-bottom: 30px;
+
+
+            }
+
+            button{
+                width: 118px;
+                height: 33px;
+                border-radius: 5px;
+                background-color: $primaryColor;
+                color: white;
+                border: none;
+            }
+            @include tablet(){
+                display: flex;
+                justify-content: space-between;
+                
+                img{
+                    width: 501px;
+                    height: 440px;
+                    margin-left: 46px;
+                    margin-top: unset;
+    
+                }
+                img:nth-last-child(2){
+                    margin: 0 46px 0 0;
+    
+                }
+                .description{
+                    width: 435px;
+                    height: 157px;
+    
+                }
+                .info{
+                    padding: unset;
+                }
+            }
+        }
+    }
+}

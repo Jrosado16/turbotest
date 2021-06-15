@@ -1,0 +1,61 @@
+
+@import 'variables';
+@import 'mixin';
+@import 'header';
+@import 'aside';
+@import 'content';
+@import 'footer';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.my-container{
+    display: flex;
+
+    .body{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transition: left .7s;
+
+    }
+    .hidden-body{
+        left: -100%;
+        height: 100px;
+        transition: left .7s;
+    }
+
+    .show-menu{
+        right: 0;
+        position: fixed;
+        // position: relative;
+        transition: right .7s;
+    }
+    
+}
+

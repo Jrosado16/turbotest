@@ -1,0 +1,136 @@
+
+
+footer{
+    margin-top: 278px;
+    color: $gray2;
+    padding-left: 2rem;
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        img{
+
+            width: 311px;
+            height: 56px;
+            margin-bottom: 39px;
+        }
+
+        .description{
+            font-size: 20px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .title{
+        border-left: 2px solid $primaryColor;
+        color: $secondaryColor;
+        font-weight: 500;
+        padding-left: 10px; 
+        margin-bottom: 20px;
+    }
+    
+    .info{
+        
+        .detail{
+            margin: 0 0 20px 0;
+            color: $primaryColor;
+            padding-left: 10px;
+            font-weight: 500;
+        }
+
+        .direction{
+            padding-left: 10px;
+        }
+        
+    }
+
+    .explora{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        a{
+            padding: 0 0 10px 10px;
+
+
+        }
+    }
+    
+    .cookies{
+        margin-top: 70px;
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        .legal{
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            li{
+                padding-right: 10px;
+                font-size: 12px;
+                padding: 10px 0;
+                list-style: none;
+            }
+           
+        }
+    }
+
+    .copy{
+        margin: 40px 0 29px 0;
+
+        p{
+            font-size: 12px;
+            margin: 15px 0;
+        }
+        p:nth-last-child(1){
+            grid-column: 3 / 4;
+        }
+    }
+
+    @include tablet(){
+        padding-left: unset;
+
+        .copy{
+            margin: 159px 0 29px 0;
+
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 45% 27% 27%;
+        }
+        .explora{
+        margin-top: 0px;
+
+        }
+        .cookies{
+            .container{
+                display: grid;
+                grid-template-columns: 45% 27% 27%;
+            }
+
+            .legal{
+                grid-column: 2 / 4;
+                margin-left: 10px;
+                flex-direction: row;
+                margin-top: unset;
+                li{
+                    list-style: circle;
+                }
+                li:nth-last-child(3){
+                    list-style: none;
+                }
+            }
+        }
+
+    }
+
+    
+}
